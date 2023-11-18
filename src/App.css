@@ -1,3 +1,62 @@
+.container_product {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cardContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* Otros estilos para la lista de tarjetas si los necesitas */
+}
+
+.custom-container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.categories-list {
+    width: 172px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    align-self: flex-start;
+}
+
+#category_subtitle{
+    padding-left: 45px;
+}
+
+
+.buttonCategory {
+    width: 100px;
+    padding: 7px 8px;
+    font-size: 16px;
+    color: #0a0101;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#ul_class{
+    list-style-type: none;
+}
+
+.buttonCategory:hover {
+    background-color: #c9dbe7;
+}
+
+.main-content {
+    flex: 3;
+}
+
 .Card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -9,33 +68,18 @@
     margin-bottom: 10px;
 }
 
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.button-container button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
 #incrementadorButtons {
     height: 31px;
     font-size: 10px;
 }
 
 #moreInformation {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 #buttonMorInformation,
 #buttonAddCart {
-    width: 110px;
+    width: 100px;
     height: 30px;
 }
 
@@ -53,7 +97,7 @@
 
 #titleInicio {
     text-decoration: solid;
-   
+
 }
 
 .navbar-brand {
@@ -82,4 +126,90 @@
 
 .sin-subrayado {
     text-decoration: none;
-  }
+}
+
+.cardContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.card-image {
+    max-height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.image-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.line {
+    background-color: red;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    /* Espacio entre los botones y el incrementador */
+}
+
+
+/* Estilos del componente de carga */
+.loader-overlay {
+    /* Estilos para la superposición del modal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que el modal esté encima del resto del contenido */
+}
+
+/* Estilos para el texto de carga */
+.loading-text {
+    color: rgb(17, 1, 1); /* Color del texto */
+    font-weight: bold; /* Estilo del texto */
+    position: relative; /* Posición relativa para el texto */
+    overflow: hidden; /* Oculta el exceso de texto */
+}
+
+/* Animación de la barra de progreso */
+.loading-text::before {
+    content: ''; /* Contenido vacío */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradiente lineal para la barra */
+    animation: progress 2s linear infinite; /* Animación de la barra */
+}
+
+/* Animación de la barra de progreso */
+@keyframes progress {
+    0% {
+        transform: translateX(-100%); /* Barra fuera de la pantalla a la izquierda */
+    }
+    100% {
+        transform: translateX(100%); /* Barra fuera de la pantalla a la derecha */
+    }
+}

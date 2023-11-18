@@ -22,7 +22,14 @@ export const ItemDetailsContainer = () => {
     }, [id]);
 
     if (!item) {
-        return <>Cargando......</>
+        return (
+            <div class="loader-overlay" id="loader-overlay">
+                <div class="loader">
+                    <p class="loading-text">Cargando....</p>
+                </div>
+            </div>
+        )
+
     }
 
 
