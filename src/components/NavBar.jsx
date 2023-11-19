@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import { CartWidget } from "./CartWidget"
+import { Button } from 'react-bootstrap';
 
 export const NavBar = () => {
   return (
@@ -14,7 +15,7 @@ export const NavBar = () => {
         <NavLink to="/" className="sin-subrayado">
           <Navbar.Brand id='titleInicio'>Ecommerce-v</Navbar.Brand>
         </NavLink>
-        <Nav>
+        <Nav className='nav-container'>
           <li>
             <Link to="/Inicio" className="nav-link">Inicio</Link>
           </li>
@@ -28,7 +29,10 @@ export const NavBar = () => {
             <Link to="/agenda" className="nav-link">Agenda</Link>
           </li>
         </Nav>
-        <CartWidget></CartWidget>
+
+        <li>
+          <Link to="/login" className='nav-link-login'>Login</Link>
+        </li>
       </Container>
     </Navbar>
   )

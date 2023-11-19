@@ -31,7 +31,7 @@
     align-self: flex-start;
 }
 
-#category_subtitle{
+#category_subtitle {
     padding-left: 45px;
 }
 
@@ -45,7 +45,7 @@
     transition: background-color 0.3s ease;
 }
 
-#ul_class{
+#ul_class {
     list-style-type: none;
 }
 
@@ -177,39 +177,95 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscurecido */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Asegura que el modal esté encima del resto del contenido */
+    z-index: 9999;
+    /* Asegura que el modal esté encima del resto del contenido */
 }
 
 /* Estilos para el texto de carga */
 .loading-text {
-    color: rgb(17, 1, 1); /* Color del texto */
-    font-weight: bold; /* Estilo del texto */
-    position: relative; /* Posición relativa para el texto */
-    overflow: hidden; /* Oculta el exceso de texto */
+    color: rgb(17, 1, 1);
+    /* Color del texto */
+    font-weight: bold;
+    /* Estilo del texto */
+    position: relative;
+    /* Posición relativa para el texto */
+    overflow: hidden;
+    /* Oculta el exceso de texto */
 }
 
 /* Animación de la barra de progreso */
 .loading-text::before {
-    content: ''; /* Contenido vacío */
+    content: '';
+    /* Contenido vacío */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradiente lineal para la barra */
-    animation: progress 2s linear infinite; /* Animación de la barra */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    /* Gradiente lineal para la barra */
+    animation: progress 2s linear infinite;
+    /* Animación de la barra */
 }
 
 /* Animación de la barra de progreso */
 @keyframes progress {
     0% {
-        transform: translateX(-100%); /* Barra fuera de la pantalla a la izquierda */
+        transform: translateX(-100%);
+        /* Barra fuera de la pantalla a la izquierda */
     }
+
     100% {
-        transform: translateX(100%); /* Barra fuera de la pantalla a la derecha */
+        transform: translateX(100%);
+        /* Barra fuera de la pantalla a la derecha */
     }
+}
+
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-wrapper {
+    width: 351px;
+    height: 303px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.btnSession {
+    position: relative;
+    top: 30px;
+    left: 24px;
+    background: #b5b5e3;
 }

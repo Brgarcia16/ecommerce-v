@@ -25,13 +25,12 @@ export const ItemDetailsContainer = () => {
         return (
             <div class="loader-overlay" id="loader-overlay">
                 <div class="loader">
-                    <p class="loading-text">Cargando....</p>
+                    <p class="loading-text">Cargando....</p>|
                 </div>
             </div>
         )
 
     }
-
 
     return (
         <div className="mt-5">
