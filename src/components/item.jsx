@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { IncrementadorCantidad } from './incrementador'
 import React, { useState } from 'react';
 
-
 export const Item = ({ item }) => {
-  const [cantidad, setCantidad] = useState(0);
   return (
     <Card style={{ width: '17rem'}}>
       <Card.Img variant="top" src={item.urlPicture} />
@@ -19,9 +16,7 @@ export const Item = ({ item }) => {
           <Link to={`/item/${item.id}`}>
             <Button variant="primary" id='buttonMorInformation'><p id='moreInformation'>Mas información</p></Button>
           </Link>
-          <IncrementadorCantidad cantidad={cantidad} setCantidad={setCantidad}/>
         </div>
-        <Button id='buttonAddCart' onClick={() => alert("Se agregaron una cantidad de " + {cantidad}.cantidad + "")}><p id='moreInformation'>Agregar carrito</p></Button>
       </Card.Body>
     </Card>
   )

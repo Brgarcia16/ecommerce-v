@@ -3,7 +3,7 @@ export const products = [
     "id": 1,
     "title": "Cortadora dorada",
     "description": "Maquina con repuestos",
-    "category": "Maquinas de cortar pelo",
+    "category": "Maquinas",
     "urlPicture": "/src/assets/imagenes/imagen_2.jpg",
   }, {
     "id": 2,
