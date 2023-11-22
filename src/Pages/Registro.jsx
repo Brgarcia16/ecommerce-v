@@ -15,6 +15,7 @@ export const Registro = () => {
         }));
     };
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Aquí puedes guardar los datos del usuario en localStorage
@@ -24,7 +25,8 @@ export const Registro = () => {
     };
     return (
         <div className="containerLogin">
-            <div className="form-wrapper">
+            <div className="form-wrapper-register">
+                <h1 id='registerTitle'>Registro</h1>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="username">Nombre de usuario:</label>
@@ -59,7 +61,7 @@ export const Registro = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className='btnSession'>Registrarse</button>
+                    <button type="submit" className='btnSessionRegister'>Registrarse</button>
                 </form>
             </div>
         </div>

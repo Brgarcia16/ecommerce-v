@@ -89,22 +89,29 @@
 
 .navbar {
     background-color: #343a40;
-    /* Color de fondo */
     padding: 20px 0;
-    /* Espaciado interno */
+}
 
+.nav-container {
+    position: fixed;
+    right: 37%;
+}
+
+#navbarContainer {
+    height: 60px;
+}
+
+.static-li {
+    position: relative;
 }
 
 #titleInicio {
     text-decoration: solid;
-
 }
 
 .navbar-brand {
     font-size: 1.5rem;
-    /* Tamaño de fuente del título */
     color: #fff;
-    /* Color del texto */
 }
 
 .nav-link {
@@ -118,6 +125,59 @@
     /* Quitar subrayado */
     transition: color 0.3s ease-in-out;
     /* Transición al cambiar color */
+}
+
+#iconLogin {
+    font-size: 25px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 60px;
+    color: #0a0101;
+    cursor: pointer;
+    top: 16px;
+}
+
+#iconExit {
+    font-size: 25px;
+    transition: transform 0.3s ease;
+    color: #0a0101;
+}
+
+#iconLogin:hover,
+#iconExit:hover {
+    transform: scale(1.2);
+}
+
+.dropdown {
+    position: absolute;
+    top: 41px;
+    right: 26px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown.show {
+    display: block;
+    opacity: 1; /* Mostrar */
+    visibility: visible; /* Mostrar */
+  }
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+    background-color: #f0f0f0;
+    /* Color de fondo al pasar el cursor sobre una opción */
 }
 
 .nav-link:hover {
@@ -226,6 +286,13 @@
     }
 }
 
+.nav-link-login {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
 .containerLogin {
     display: flex;
     justify-content: center;
@@ -242,7 +309,17 @@
     background-color: #f9f9f9;
 }
 
-.form-wrapper h1 {
+.form-wrapper-register {
+    width: 351px;
+    height: 356px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-wrapper h1,
+#registerTitle {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -267,5 +344,12 @@ input {
     position: relative;
     top: 30px;
     left: 24px;
+    background: #b5b5e3;
+}
+
+.btnSessionRegister {
+    position: relative;
+    top: 20px;
+    left: 100px;
     background: #b5b5e3;
 }

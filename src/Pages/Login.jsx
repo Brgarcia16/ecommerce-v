@@ -1,6 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 
 export const Login = () => {
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [correctLogin, setCorrectLogin] = useState(false);
+
+    const handleLogin = () => {
+        const formData = JSON.parse(localStorage.getItem('userData'));
+
+        if (formData != null) {
+            if (formData.username === username) {
+                if (formData.password === password) {
+                    setCorrectLogin(true);
+                } else {
+                    alert("Password incorrecta")
+                }
+            } else {
+                alert("Usuario incorrecto")
+            }
+        } else {
+            console.log("Se debe registrar")
+        }
+    }
+
+  
+
     return (
         <div className="containerLogin">
             <div className="form-wrapper">
@@ -12,9 +38,8 @@ export const Login = () => {
                             type="user"
                             id="user"
                             name="user"
-                        // value={formData.email}
-                        // onChange={handleInputChange}
-                        // required
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
                         />
                     </div>
                     <div>
@@ -23,13 +48,12 @@ export const Login = () => {
                             type="password"
                             id="password"
                             name="password"
-                        // value={formData.password}
-                        // onChange={handleInputChange}
-                        // required
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
                     </div>
-                    <a href="Registro">Registrase</a>
-                    <button type="submit" className='btnSession'>Iniciar sesión</button>
+                    <a href="Registro">Registrarse</a>
+                    <button type="submit" className='btnSession' onClick={handleLogin}>Iniciar sesión</button>
                 </form>
             </div>
         </div>
