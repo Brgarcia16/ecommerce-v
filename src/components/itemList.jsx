@@ -5,7 +5,7 @@ export const ItemList = ({ items }) => {
     return (
         <Container className='d-flex'>
             {items.map((item) => (
-                <Item key={item} item={item} />
+                <Item key={item.id} item={item} />
             ))}
         </Container>
     )
