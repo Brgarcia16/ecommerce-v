@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import { ItemList } from "./ItemList";
 import { products } from "../data/products";
 
-export const ItemListContainer = () => {
+export const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
