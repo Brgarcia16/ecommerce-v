@@ -4,7 +4,8 @@ import { ItemsCounter } from './ItemsCounter'
 import Button from 'react-bootstrap/Button';
 
 import { products } from "../data/products";
-export const ItemDetailsContainer = () => {
+
+export const ItemsDetailsContainer = () => {
     const [item, setItem] = useState(null)
     const [cantidad, setCantidad] = useState(0);
 
