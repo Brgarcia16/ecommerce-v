@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import { Item } from "./Item"
+import { Item } from "./item"
 
 export const ItemList = ({ items }) => {
     return (
